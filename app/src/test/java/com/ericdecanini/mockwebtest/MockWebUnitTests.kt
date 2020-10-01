@@ -44,7 +44,7 @@ class MockWebUnitTests {
     @Test
     fun `JsonPlaceholder APIs parse correctly`() {
         server.apply {
-            enqueue(MockResponse().setBody(MockResponseFileReader("jsonplaceholder_success.json").content))
+            enqueue(MockResponse().setBody(MockResponseFileReader("jsonplaceholder_success.json").contents))
         }
         jsonRepository.observePosts()
             .test()
