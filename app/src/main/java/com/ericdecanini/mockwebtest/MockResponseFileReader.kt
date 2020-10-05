@@ -4,11 +4,11 @@ import java.io.InputStreamReader
 
 class MockResponseFileReader(path: String) {
 
-    val content: String
+    val contents: String
 
     init {
         val reader = InputStreamReader(this.javaClass.classLoader!!.getResourceAsStream(path))
-        content = reader.readText()
+        contents = reader.readText()
         reader.close()
     }
 
